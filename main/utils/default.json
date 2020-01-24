@@ -1,0 +1,22 @@
+{
+    "messages": {
+        "default": "\n>> Please input a command. Type 'help' for a list of commands.\n",
+        "help": "\n>> Commands: start_task <string>, get_task <string>, stop_task <string>, list_tasks\n",
+        "exit": "\nBye :)",
+        "get_task": "\n>> Searching for your task...",
+        "finish_task": "\n>> Finishing your task...",
+        "pause_task": "\n>> Pausing your task...",
+        "list_tasks": "\n>> Listing your tasks..."
+    },
+    "commandList": ["help_commands", "start_task", "get_task", "finish_task", "pause_task", "list_tasks", "exit", "new_task"],
+    "tasks": {
+        "first": {
+            "started": "Date",
+            "finished": "Date",
+            "paused": "false",
+            "days": "0",
+            "hours": "2",
+            "minutes": "23"
+        }
+    }
+}
