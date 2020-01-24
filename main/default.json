@@ -6,5 +6,5 @@
         }, 
         "exit": "\nBye :)"
     },
-    "commandList": ["help", "start_task", "get_task", "stop_task, list_tasks"]
+    "commandList": ["help", "start_task", "get_task", "stop_task", "list_tasks"]
 }

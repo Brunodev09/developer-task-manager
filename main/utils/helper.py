@@ -7,7 +7,7 @@ def switcher(keys, methods):
     count = 0
     for key in keys:
         objDict[key] = methods[count]
-        count += count + 1
+        count += 1
     return objDict
 
 def request_for_input(msg):

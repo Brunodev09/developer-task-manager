@@ -1,5 +1,4 @@
 def help():
-    # print()
     return
 
 def start_task():
