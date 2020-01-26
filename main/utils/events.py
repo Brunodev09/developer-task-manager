@@ -1,7 +1,7 @@
 class eventSwitch:
-    def __init__(self, doc):
+    def __init__(self, doc, db):
         self.doc = doc
-
+        self.db = db
     def help_commands(self):
         print(self.doc["messages"]["help"])
         return True
@@ -15,14 +15,17 @@ class eventSwitch:
 
     def get_task(self, task):
         print(self.doc["messages"]["get_task"])
-        if (task in self.doc["tasks"]):
-            print('>> Task ' + task + ' has been found.')
-            keys = self.doc["tasks"][task].keys()
-            finalStr = ""
-            for k in keys:
-                finalStr += "\n>> " + k + ": " + self.doc["tasks"][task][k]
-            print(finalStr)
-            return True    
+        if self.db is None:
+            if (task in self.doc["tasks"]):
+                print('>> Task ' + task + ' has been found.')
+                keys = self.doc["tasks"][task].keys()
+                finalStr = ""
+                for k in keys:
+                    finalStr += "\n>> " + k + ": " + self.doc["tasks"][task][k]
+                print(finalStr)
+                return True
+        else:
+            return self.db.select_all('task', task)            
         print('>> ' + task + ' is not in cache.')        
         return False
 
